@@ -1,11 +1,19 @@
 {
+  "id": "/politics-app/",
   "name": "Politics",
   "short_name": "Politics",
   "description": "Learn politics with interactive lessons, quizzes, and flashcards",
-  "start_url": "./index.html",
+  "start_url": "./index.html?utm_source=pwa",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#2a1f3a",
-  "theme_color": "#2a1f3a",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#0a2a20",
+  "theme_color": "#0a2a20",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["education", "books"],
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "icon-192.png",
@@ -40,6 +48,29 @@
       "src": "icon.svg",
       "sizes": "any",
       "type": "image/svg+xml"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Continue lesson",
+      "short_name": "Lesson",
+      "description": "Jump back into your current lesson",
+      "url": "./index.html?tab=lessons",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Take a quiz",
+      "short_name": "Quiz",
+      "description": "Test yourself on what you've learned",
+      "url": "./index.html?tab=quiz",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Flashcards",
+      "short_name": "Cards",
+      "description": "Review terms with spaced flashcards",
+      "url": "./index.html?tab=flashcards",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
     }
   ]
 }

@@ -2900,3 +2900,23 @@ function revealMueller() {
     '<strong>Top line: 200 px Â· Your line: ' + v + ' px (' + direction + ' by ' + Math.abs(diff) + ' px)</strong><br>' +
     '<span style="color:var(--muted);font-size:0.82rem">' + comment + ' Your visual system applies depth-cue heuristics automatically â€” and you can\'t simply turn them off.</span>';
 }
+
+// ═══════════════════════════════════════════
+// DEEP-LINK HANDLER
+// Opens a specific tab on load when launched with ?tab=<id>
+// Used by PWA manifest shortcuts (lessons / quiz / flashcards).
+// ═══════════════════════════════════════════
+(function () {
+  const tab = new URLSearchParams(location.search).get('tab');
+  if (!tab) return;
+  const run = () => {
+    const btn = Array.from(document.querySelectorAll('.tab-btn'))
+      .find(b => (b.getAttribute('onclick') || '').includes("showTab('" + tab + "'"));
+    if (btn) btn.click();
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', run);
+  } else {
+    run();
+  }
+})();
