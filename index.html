@@ -61,10 +61,7 @@
   }
 
   header {
-    background: var(--glass);
-    backdrop-filter: blur(24px) saturate(180%);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
-    border-bottom: 1px solid var(--border);
+    background: var(--bg);
     padding: 0 24px;
     padding-top: env(safe-area-inset-top, 0px);
     display: flex;
@@ -74,7 +71,6 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 1px 12px rgba(45, 212, 191, 0.10);
   }
   @supports (padding-top: env(safe-area-inset-top)) {
     header { padding-top: env(safe-area-inset-top); }
@@ -91,10 +87,7 @@
   .progress-fill { height: 100%; background: linear-gradient(90deg, #67e8f9, #2dd4bf 50%, #0d9488); border-radius: 99px; transition: width 0.5s ease; width: 0%; }
 
   nav {
-    background: var(--glass);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid var(--border);
+    background: var(--bg);
     display: flex;
     padding: 0 16px;
     gap: 4px;
