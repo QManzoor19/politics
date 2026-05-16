@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c4a8ff"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#5b3ba8"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- Two overlapping circles for brain hemispheres -->
+  <g fill="none" stroke="#ffffff" stroke-width="8">
+    <circle cx="220" cy="215" r="100"/>
+    <circle cx="292" cy="215" r="100"/>
+  </g>
+  <!-- Inner fold arcs -->
+  <g fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="5">
+    <path d="M 145 245 A 88 88 0 0 0 285 245"/>
+    <path d="M 227 245 A 88 88 0 0 0 367 245"/>
+  </g>
+  <!-- Center divider -->
+  <line x1="256" y1="125" x2="256" y2="305" stroke="rgba(255,255,255,0.7)" stroke-width="4"/>
+  <!-- PSYCH text -->
+  <text x="256" y="410" text-anchor="middle" font-size="92" font-weight="800" letter-spacing="6" fill="#ffffff" font-family="-apple-system, system-ui, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif">PSYCH</text>
+</svg>
